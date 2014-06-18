@@ -1,0 +1,13 @@
+Records IP for client logins and makes them searchable for WHMCS
+Version 1.0 by KuJoe (JMD.cc)
+Slightly edited from Aldryic C'boas initial hook here: https://vpsboard.com/topic/134-whmcs-extended-login-tracking/
+Ported from this addon here: http://www.whmcs.com/appstore/52/Search-IP.html
+
+//Installation:
+1) Create tbllogins table in WHMCS database (query below).
+2) Upload the login_tracking.php file into your WHMCS's hooks directory (/includes/hooks/).
+2) Upload the search_ip folder into your WHMCS's addons directory (/modules/addons/).
+
+//Queries to create database table (run these commands in phpMyAdmin, Adminer, SQLBuddy, command line, or your MySQL editor of choice):
+CREATE TABLE tbllogins (clientid INT(10), ip VARCHAR(15), date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX idx1 ON tbllogins(clientid); CREATE INDEX idx2 ON tbllogins(ip); CREATE INDEX idx3 ON tbllogins(date);
