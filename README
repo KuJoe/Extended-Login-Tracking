@@ -1,6 +1,6 @@
 Records IP for client logins and makes them searchable for WHMCS
 Version 1.0 by KuJoe (JMD.cc)
-Slightly edited from Aldryic C'boas initial hook here: https://vpsboard.com/topic/134-whmcs-extended-login-tracking/
+Slightly edited from Aldryic C'boas initial hook here (and I borrowed the name): https://vpsboard.com/topic/134-whmcs-extended-login-tracking/
 Ported from this addon here: http://www.whmcs.com/appstore/52/Search-IP.html
 
 //Installation:
