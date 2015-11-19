@@ -1,7 +1,6 @@
 <?php
 /**
-Records IP for client logins and makes them searchable for WHMCS
-Version 1.0 by KuJoe (JMD.cc)
+Records IP for client logins and makes them searchable for WHMCS by KuJoe (JMD.cc)
 Ported from this addon here: http://www.whmcs.com/appstore/52/Search-IP.html
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -18,7 +17,7 @@ function search_ip_config() {
     $configarray = array(
     "name" => "Search IP",
     "description" => "Search for IPs in WHMCS using login_tracking hook.",
-    "version" => "1.0",
+    "version" => "1.1",
     "author" => "KuJoe",
     "language" => "english"
 	);
@@ -77,7 +76,7 @@ if ($filtervalue == NULL){
 	}else{
 
 	$clientid="";
-	$query = "SELECT * FROM tbllogins";
+	$query = "SELECT * FROM mod_tbllogins";
 	$query.= " WHERE ip";
 	if ($filtertype=="starts with") {
 		$query.= " LIKE '$filtervalue%'";
